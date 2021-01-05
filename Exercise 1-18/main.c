@@ -16,9 +16,10 @@ main() {
     char line[MAXLINE];
 
     while ((len = get_line(line, MAXLINE)) > 0) {
-        trim(line, len);
-        if (line[0] != '\n')
+        if (line[0] != '\n') {
+            trim(line, len);
             printf("%s", line);
+        }
     }
 
     return 0;
